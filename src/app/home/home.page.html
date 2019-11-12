@@ -1,14 +1,32 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      WoW Base de datos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input [(ngModel)]="personajeEditando.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Sexo</ion-label>
+    <ion-input [(ngModel)]="personajeEditando.sexo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nivel</ion-label>
+    <ion-input [(ngModel)]="personajeEditando.nivel"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Raza</ion-label>
+    <ion-input [(ngModel)]="personajeEditando.raza"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Clase</ion-label>
+    <ion-input [(ngModel)]="personajeEditando.clase"></ion-input>
+  </ion-item>
+  
+  <ion-button (click)="clicBotonInsertar()">Añadir Personaje</ion-button>
 </ion-content>
