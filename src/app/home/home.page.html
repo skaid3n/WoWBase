@@ -29,4 +29,24 @@
   </ion-item>
   
   <ion-button (click)="clicBotonInsertar()">Añadir Personaje</ion-button>
+  
+  <h1>Lista de Personajes</h1>
+  <ion-list>
+    <ion-item *ngFor="let documentPersonajes of arrayColeccionPersonajes">
+      <ion-grid>
+
+        <ion-row>
+          <h2>{{documentPersonajes.data.nombre}}</h2>
+        </ion-row>
+
+        <ion-row>
+          <p>{{documentPersonajes.data.sexo}}</p>
+        </ion-row>
+        
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
+
+

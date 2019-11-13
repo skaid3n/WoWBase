@@ -9,18 +9,40 @@ import { Personajes } from '../personajes';
 })
 export class HomePage {
 
-  personajeEditando: Personajes;  
+  personajeEditando: Personajes; 
+    
+  arrayColeccionPersonajes: any = [{
+    id: "",
+    data: {} as Personajes}];
+
+   
 
   constructor(private firestoreService: FirestoreService) {
-    // Crear una tarea vacía
+    // Crear un personaje vacío
     this.personajeEditando = {} as Personajes;
+    this.obtenerListaPersonajes();
+  } 
+  clicBotonInsertar() {
+    this.firestoreService.insertar("personajes", this.personajeEditando).then(() => {
+      console.log('Personaje creado correctamente!');
+      this.personajeEditando= {} as Personajes;
+    }, (error) => {
+      console.error(error);
+    });
+  }
+  obtenerListaPersonajes(){
+    this.firestoreService.consultar("personajes").subscribe((resultadoConsultaPersonajes) => {
+      this.arrayColeccionPersonajes = [];
+      resultadoConsultaPersonajes.forEach((datosPersonajes: any) => {
+        this.arrayColeccionPersonajes.push({
+          id: datosPersonajes.payload.doc.id,
+          data: datosPersonajes.payload.doc.data()
+        });
+      })
+    });
+  }
+  
 }
-clicBotonInsertar() {
-  this.firestoreService.insertar("personajes", this.personajeEditando).then(() => {
-    console.log('Personaje creado correctamente!');
-    this.personajeEditando= {} as Personajes;
-  }, (error) => {
-    console.error(error);
-  });
-}
-}
+
+
+
