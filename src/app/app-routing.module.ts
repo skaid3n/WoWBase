@@ -4,6 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: 'especifico/:id', loadChildren: './especifico/especifico.module#EspecificoPageModule' },
 ];
 
 @NgModule({
@@ -13,3 +14,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+  

@@ -32,7 +32,7 @@
   
   <h1>Lista de Personajes</h1>
   <ion-list>
-    <ion-item *ngFor="let documentPersonajes of arrayColeccionPersonajes">
+    <ion-item *ngFor="let documentPersonajes of arrayColeccionPersonajes" (click)="navigateToEspecifico(documentPersonajes)">
       <ion-grid>
 
         <ion-row>
@@ -42,7 +42,8 @@
         <ion-row>
           <p>{{documentPersonajes.data.sexo}}</p>
         </ion-row>
-        
+        <ion-button (click)="clicBotonBorrar()">Borrar PJ</ion-button>
+        <ion-button (click)="clicBotonModificar()">Modificar PJ</ion-button>
       </ion-grid>
     </ion-item>
   </ion-list>
