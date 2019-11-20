@@ -7,27 +7,6 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-label>Nombre</ion-label>
-    <ion-input [(ngModel)]="personajeEditando.nombre"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Sexo</ion-label>
-    <ion-input [(ngModel)]="personajeEditando.sexo"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Nivel</ion-label>
-    <ion-input [(ngModel)]="personajeEditando.nivel"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Raza</ion-label>
-    <ion-input [(ngModel)]="personajeEditando.raza"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Clase</ion-label>
-    <ion-input [(ngModel)]="personajeEditando.clase"></ion-input>
-  </ion-item>
-  
   <ion-button (click)="clicBotonInsertar()">Añadir Personaje</ion-button>
   
   <h1>Lista de Personajes</h1>
@@ -42,11 +21,10 @@
         <ion-row>
           <p>{{documentPersonajes.data.sexo}}</p>
         </ion-row>
-        <ion-button (click)="clicBotonBorrar()">Borrar PJ</ion-button>
-        <ion-button (click)="clicBotonModificar()">Modificar PJ</ion-button>
       </ion-grid>
     </ion-item>
   </ion-list>
+
 
 </ion-content>
 

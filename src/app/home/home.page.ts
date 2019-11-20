@@ -16,7 +16,8 @@ export class HomePage {
   arrayColeccionPersonajes: any = [{
     id: "",
     data: {} as Personajes}];
-    idPersonajeSelec: string;
+
+  idPersonajeSelec: string;
 
    
 
@@ -53,23 +54,6 @@ export class HomePage {
     this.personajeEditando.sexo = personajeSelec.data.sexo;
   }
 
-  clicBotonBorrar() {
-    this.firestoreService.borrar("personajes", this.idPersonajeSelec).then(() => {
-      // Actualizar la lista completa
-      this.obtenerListaPersonajes();
-      // Limpiar datos de pantalla
-      this.personajeEditando = {} as Personajes;
-    })
-  }
-
-  clicBotonModificar() {
-    this.firestoreService.actualizar("personajes", this.idPersonajeSelec, this.personajeEditando).then(() => {
-      // Actualizar la lista completa
-      this.obtenerListaPersonajes();
-      // Limpiar datos de pantalla
-      this.personajeEditando = {} as Personajes;
-    })
-  }
   navigateToEspecifico(selecPersonaje) {
     this.router.navigate(["/especifico/" + selecPersonaje.id]);
   }
