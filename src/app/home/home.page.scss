@@ -1,1 +1,25 @@
 
+ion-header > ion-toolbar {
+    --ion-background-color: rgb(40, 241, 181);
+    color: rgb(0, 0, 0);
+}
+
+ion-title {
+    text-align: center;
+}
+
+.button-footer {
+    margin: auto;
+}
+
+@media (orientation: landscape) {
+    .pie {
+        justify-content: center;
+    }
+}
+
+@media (orientation: portrait) {
+    .button-footer {
+        font-size: 0;
+    }
+}

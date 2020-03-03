@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="navigateToInicio()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Información
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Informacion sobre nuestra base de datos de WoW</h1>
+  <p>Conoce todos los detalles de cualquier personaje a tiempo real.</p>
+  <ion-img width="80" height="80" src="https://blznav.akamaized.net/img/games/cards/card-world-of-warcraft-54576e6364584e35.jpg"></ion-img>
+  <br>
+  <p class="ion-margin-start ion-margin-end" (click)="llamar()">Llamar al contacto 123456789</p>
+</ion-content>
+<ion-footer class="pie">
+  <ion-toolbar>
+    <ion-buttons class="botones-footer">
+      <ion-button class="button-footer" (click)=navigateToConfigurador()>
+        <ion-icon name="laptop" size="large"></ion-icon>
+      </ion-button>
+      <ion-button class="button-footer" (click)=navigateToInformacion()>
+        <ion-icon name="watch" size="large"></ion-icon>
+      </ion-button>
+      <ion-button class="button-footer" (click)=navigateToAbout()>
+        <ion-icon name="today" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

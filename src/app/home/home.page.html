@@ -3,15 +3,19 @@
     <ion-title>
       WoW Base de datos
     </ion-title>
+    <ion-buttons slot="end">
+
+      <ion-button title="Log Out" *ngIf="userUID !== ''" (click)="logout()"><ion-icon name="log-out"></ion-icon></ion-button>
+      <ion-button title="Sing In" *ngIf="userUID == ''" (click)="navigateToLogin()"><ion-icon name="log-in"></ion-icon></ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-button (click)="clicBotonInsertar()">Añadir Personaje</ion-button>
-  
+<ion-content fullscreen>
+  <p hidden>{{ userUID }}</p>
   <h1>Lista de Personajes</h1>
   <ion-list>
-    <ion-item *ngFor="let documentPersonajes of arrayColeccionPersonajes" (click)="navigateToEspecifico(documentPersonajes)">
+    <ion-item *ngFor="let documentPersonajes of arrayColeccionPersonajes" (click)="navigateToEspecifico(documentPersonajes.id)">
       <ion-grid>
 
         <ion-row>
@@ -21,11 +25,30 @@
         <ion-row>
           <p>{{documentPersonajes.data.sexo}}</p>
         </ion-row>
+
       </ion-grid>
     </ion-item>
   </ion-list>
 
-
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button *ngIf="userUID !== ''" (click)="navigateToEspecifico('nuevo')" color="primary">
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
 
-
+<ion-footer class="pie">
+  <ion-toolbar>
+    <ion-buttons class="botones-footer">
+      <ion-button class="button-footer" (click)=navigateToConfigurador()>
+        <ion-icon name="laptop" size="large"></ion-icon>Configurador
+      </ion-button>
+      <ion-button class="button-footer" (click)=navigateToInformacion()>
+        <ion-icon name="watch" size="large"></ion-icon>Información
+      </ion-button>
+      <ion-button class="button-footer" (click)=navigateToAbout()>
+        <ion-icon name="today" size="large"></ion-icon>Acerca de
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -4,5 +4,6 @@ export interface Personajes {
     nivel: number;
     raza: string;
     clase: string;
+    foto: string;
 
 }
