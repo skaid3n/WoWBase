@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
 export class LoginPage {
 
   validations_form: FormGroup;
@@ -20,7 +21,7 @@ export class LoginPage {
    ],
    'password': [
      { type: 'required', message: 'Se requiere contraseña.' },
-     { type: 'minlength', message: 'Password must be at least 5 characters long.' }
+     { type: 'minlength', message: 'La contraseña tiene que contener almenos 5 caracteres.' }
    ]
  };
 
@@ -55,7 +56,7 @@ export class LoginPage {
     })
   }
 
-  goRegisterPage(){
+  paginaRegistro(){
     this.router.navigate(["/register"]);
   }
 }

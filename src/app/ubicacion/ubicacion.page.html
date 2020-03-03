@@ -4,24 +4,33 @@
       <ion-back-button (click)="navigateToInicio()"></ion-back-button>
     </ion-buttons>
     <ion-title>
-      Información
+      Ubicación
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <h1>Informate sobre nuestra base de datos de World of Warcraft</h1>
-  <p>Conoce todos los detalles de cualquier personaje a tiempo real llamando al siguiente número.</p>
-  <ion-img width="80" height="80" src="https://blznav.akamaized.net/img/games/cards/card-world-of-warcraft-54576e6364584e35.jpg"></ion-img>
-  <br>
-  <p class="ion-margin-start ion-margin-end" (click)="llamar()">Llamar al contacto 123456789</p>
-</ion-content>
+  <h1>Ubicación donde se encuentra nuestra base de datos ubicada</h1>
+  <p>Sitio Oficial.</p>
 
+  <div  
+    id="mapId" 
+    style="height:100%">
+  </div>
+
+  <ion-item 
+      style="cursor: pointer">
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="stacked">IES Los Remedios - Ubrique (11600)</ion-label>
+  </ion-item>
+
+</ion-content>
 
 <ion-footer class="pie">
   <ion-toolbar>
     <ion-buttons class="botones-footer">
-
       <ion-button class="button-footer" (click)=navigateToArmory()>
         <ion-icon name="menu" size="large"></ion-icon>
       </ion-button>
@@ -33,7 +42,6 @@
       <ion-button class="button-footer" (click)=navigateToUbicacion()>
         <ion-icon name="paper-plane" size="large"></ion-icon>
       </ion-button>
-    
     </ion-buttons>
   </ion-toolbar>
 </ion-footer>

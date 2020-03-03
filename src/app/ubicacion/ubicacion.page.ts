@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import {Map,tileLayer,marker} from 'leaflet';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.page.html',
-  styleUrls: ['./about.page.scss'],
+  selector: 'app-ubicacion',
+  templateUrl: './ubicacion.page.html',
+  styleUrls: ['./ubicacion.page.scss'],
 })
-export class AboutPage implements OnInit {
+export class UbicacionPage implements OnInit {
   map:Map;
   newMarker:any;
   address:string[];
@@ -17,33 +17,35 @@ export class AboutPage implements OnInit {
     ionViewDidEnter(){
       this.loadMap();
     }
-   loadMap() {
+
+   loadMap() { //Función que cargara el mapa 
+               //en la ubicación seleccionada por coordenadas
     this.map = new Map("mapId").setView([36.679701, -5.444874], 15);
     tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       { attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY- SA</a>' })
       .addTo(this.map); 
       
-      this.newMarker = marker([36.679701, -5.444874], {draggable: 
-        true}).addTo(this.map);
+      this.newMarker = marker([36.679701, -5.444874], {draggable: true}).addTo(this.map);
   }
 
   ngOnInit() {
   }
 
+  //Enrutamiento
   navigateToInicio() {
     this.router.navigate(["/"]);
   }
-
-  navigateToConfigurador() {
-    this.router.navigate(["/configurador/"]);
+  //Enrutamiento
+  navigateToArmory() {
+    this.router.navigate(["/armory/"]);
   }
-
+  //Enrutamiento
   navigateToInformacion() {
     this.router.navigate(["/informacion/"]);
   }
-
-  navigateToAbout() {
-    this.router.navigate(["/about/"]);
+  //Enrutamiento
+  navigateToUbicacion() {
+    this.router.navigate(["/ubicacion/"]);
   }
 
 }

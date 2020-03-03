@@ -15,14 +15,14 @@ export class RegisterPage implements OnInit {
   successMessage: string = '';
 
   validation_messages = {
-   'email': [
-     { type: 'required', message: 'Email is required.' },
-     { type: 'pattern', message: 'Enter a valid email.' }
-   ],
-   'password': [
-     { type: 'required', message: 'Password is required.' },
-     { type: 'minlength', message: 'Password must be at least 5 characters long.' }
-   ]
+    'email': [
+      { type: 'required', message: 'Se requiere Email.' },
+      { type: 'pattern', message: 'Email incorrecto.' }
+    ],
+    'password': [
+      { type: 'required', message: 'Se requiere contraseña.' },
+      { type: 'minlength', message: 'La contraseña tiene que contener almenos 5 caracteres.' }
+    ]
   };
 
   constructor(
@@ -57,7 +57,7 @@ export class RegisterPage implements OnInit {
      })
   }
 
-  goLoginPage(){
+  paginaInicio(){
     this.router.navigate(["/login"]);
   }
 

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-configurador',
-  templateUrl: './configurador.page.html',
-  styleUrls: ['./configurador.page.scss'],
+  selector: 'app-armory',
+  templateUrl: './armory.page.html',
+  styleUrls: ['./armory.page.scss'],
 })
-export class ConfiguradorPage implements OnInit {
+export class ArmoryPage implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -17,16 +17,16 @@ export class ConfiguradorPage implements OnInit {
     this.router.navigate(["/"]);
   }
 
-  navigateToConfigurador() {
-    this.router.navigate(["/configurador/"]);
+  navigateToArmory() {
+    this.router.navigate(["/armory/"]);
   }
 
   navigateToInformacion() {
     this.router.navigate(["/informacion/"]);
   }
 
-  navigateToAbout() {
-    this.router.navigate(["/about/"]);
+  navigateToUbicacion() {
+    this.router.navigate(["/ubicacion/"]);
   }
 
 }

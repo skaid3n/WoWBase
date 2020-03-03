@@ -47,16 +47,16 @@ export class HomePage {
     this.router.navigate(["/especifico/" + id]);
   }
 
-  navigateToConfigurador() {
-    this.router.navigate(["/configurador/"]);
+  navigateToArmory() {
+    this.router.navigate(["/armory/"]);
   }
 
   navigateToInformacion() {
     this.router.navigate(["/informacion/"]);
   }
 
-  navigateToAbout() {
-    this.router.navigate(["/about/"]);
+  navigateToUbicacion() {
+    this.router.navigate(["/ubicacion/"]);
   }
 
   obtenerListaPersonajes(){
@@ -94,7 +94,7 @@ export class HomePage {
 		  }
 		})
   }
-  
+
   async logout(){
 		const toast = await this.toastController.create({
 			message: 'Sesion Cerrada',

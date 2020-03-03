@@ -5,8 +5,9 @@
     </ion-title>
     <ion-buttons slot="end">
 
-      <ion-button title="Log Out" *ngIf="userUID !== ''" (click)="logout()"><ion-icon name="log-out"></ion-icon></ion-button>
-      <ion-button title="Sing In" *ngIf="userUID == ''" (click)="navigateToLogin()"><ion-icon name="log-in"></ion-icon></ion-button>
+      <ion-button title="Log Out" *ngIf="userUID !== ''" (click)="logout()"> Cerrar Sesión <ion-icon name="log-out"></ion-icon></ion-button>
+      <ion-button title="Sing In" *ngIf="userUID == ''" (click)="navigateToLogin()">Iniciar Sesión <ion-icon name="log-in"></ion-icon></ion-button>
+
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -15,6 +16,7 @@
   <p hidden>{{ userUID }}</p>
   <h1>Lista de Personajes</h1>
   <ion-list>
+    <!-- Crear personaje, que mostrará Nombre del personaje creado y el sexo -->
     <ion-item *ngFor="let documentPersonajes of arrayColeccionPersonajes" (click)="navigateToEspecifico(documentPersonajes.id)">
       <ion-grid>
 
@@ -40,14 +42,14 @@
 <ion-footer class="pie">
   <ion-toolbar>
     <ion-buttons class="botones-footer">
-      <ion-button class="button-footer" (click)=navigateToConfigurador()>
-        <ion-icon name="laptop" size="large"></ion-icon>Configurador
+      <ion-button class="button-footer" (click)=navigateToArmory()>
+        <ion-icon name="menu" size="large"></ion-icon>Armory
       </ion-button>
       <ion-button class="button-footer" (click)=navigateToInformacion()>
-        <ion-icon name="watch" size="large"></ion-icon>Información
+        <ion-icon name="call" size="large"></ion-icon>Información
       </ion-button>
-      <ion-button class="button-footer" (click)=navigateToAbout()>
-        <ion-icon name="today" size="large"></ion-icon>Acerca de
+      <ion-button class="button-footer" (click)=navigateToUbicacion()>
+        <ion-icon name="paper-plane" size="large"></ion-icon>Ubicación
       </ion-button>
     </ion-buttons>
   </ion-toolbar>

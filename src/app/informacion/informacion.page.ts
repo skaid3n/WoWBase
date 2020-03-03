@@ -18,16 +18,16 @@ export class InformacionPage implements OnInit {
     this.router.navigate(["/"]);
   }
 
-  navigateToConfigurador() {
-    this.router.navigate(["/configurador/"]);
+  navigateToArmory() {
+    this.router.navigate(["/armory/"]);
   }
 
   navigateToInformacion() {
     this.router.navigate(["/informacion/"]);
   }
 
-  navigateToAbout() {
-    this.router.navigate(["/about/"]);
+  navigateToUbicacion() {
+    this.router.navigate(["/ubicacion/"]);
   }
 
   llamar() {

@@ -5,9 +5,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'especifico/:id', loadChildren: './especifico/especifico.module#EspecificoPageModule' },
-  { path: 'configurador', loadChildren: './configurador/configurador.module#ConfiguradorPageModule' },
+  { path: 'armory', loadChildren: './armory/armory.module#ArmoryPageModule' },
   { path: 'informacion', loadChildren: './informacion/informacion.module#InformacionPageModule' },
-  { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
+  { path: 'ubicacion', loadChildren: './ubicacion/ubicacion.module#UbicacionPageModule' },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
 ];
