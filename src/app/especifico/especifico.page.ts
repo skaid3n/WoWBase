@@ -274,11 +274,6 @@ export class EspecificoPage implements OnInit {
 		this.socialSharing.share(msg, null, null, null);
 	}
 
-	// twitterShare(){
-	// 	let msg = this.componerMsg();
-	// 	this.socialSharing.shareViaTwitter(msg, null, null);
-	// }
-
 	whatsappShare(){
 		let msg = this.componerMsg();
 		this.socialSharing.shareViaWhatsApp(msg, null, null);
