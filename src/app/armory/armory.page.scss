@@ -10,10 +10,9 @@ ion-title {
 .button-footer {
     margin: auto;
 }
-
 @media (orientation: landscape) {
     .pie {
-        height: 0;
-        visibility: collapse;
+        justify-content: center;
+        --ion-background-color: rgb(40, 241, 181);
     }
 }
