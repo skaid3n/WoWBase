@@ -264,7 +264,7 @@ export class EspecificoPage implements OnInit {
 	}
 
 	componerMsg(){
-		var msg = 'El personaje ' + this.document.data.nombre + ' ha desbloqueado el nivel' + this.document.data.nivel;
+		var msg = 'El personaje ' + this.document.data.nombre + ' ha desbloqueado el nivel ' + this.document.data.nivel;
 		return msg;
 
 	}

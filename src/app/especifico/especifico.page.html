@@ -66,7 +66,7 @@
 
         <br>
 
-        <ion-buttons slot="end">
+        <ion-buttons *ngIf="id != 'nuevo'" slot="end">
 
           <ion-button (click)="regularShare()">
             <ion-icon name="share"></ion-icon>
